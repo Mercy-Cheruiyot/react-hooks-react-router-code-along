@@ -108,9 +108,7 @@ function App() {
 
 // Step 3. Use <BrowserRouter> component to wrap the entire application and provide React Router context features
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  
   document.getElementById("root")
 );
 ```
