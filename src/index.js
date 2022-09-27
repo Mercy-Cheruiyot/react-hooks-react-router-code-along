@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter,Route} from "react-router-dom";
+import {BrowserRouter,Route,Switch} from "react-router-dom";
 
 function Home() {
   return (
@@ -32,11 +32,12 @@ function About() {
       </div>
     );
   }
-
+/*
 function App() {
   return(
  
   <BrowserRouter>
+  <switch>
   <Route path="/">
   <Home />
   </Route>
@@ -46,15 +47,27 @@ function App() {
       <Route path="/login">
         <Login />
       </Route>
+      <switch>
   </BrowserRouter>
   
   );
   
 }
-
+*/
 ReactDOM.render(
-<BrowserRouter>
-    <App />
+  <BrowserRouter>
+  <switch>
+  
+  <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/">
+  <Home />
+  </Route>
+     </switch>
   </BrowserRouter>,
  document.getElementById("root")
  );
